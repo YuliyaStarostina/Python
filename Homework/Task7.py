@@ -9,7 +9,7 @@ def mult(n):
 
 num = int(input("Введите число: "))
 list = []
-for e in range(1, num + 1):
-    list.append(mult(e))
+for a in range(1, num + 1):
+    list.append(mult(a))
 
 print(f"Произведениe чисел от 1 до {num}:  {list}")

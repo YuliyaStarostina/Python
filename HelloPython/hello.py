@@ -1,6 +1,7 @@
 # типы даных и переменная
 # int, float, boolean, str, list, None
 # для того, чтобы воспользоваться переменной, можно сначала присвоить ей значение None
+
 from re import S
 
 
@@ -203,3 +204,30 @@ print(f(28))  # None
 print(type(f(1)))  # str
 print(type(f(2.3)))  # int
 print(type(f(28)))  # NoneTyp
+
+
+# Файлы
+#Как работать с файлами:
+# Связать файловую переменную с файлом, определив модификатор работы
+# a – открытие для добавления данных
+#r – открытие для чтения данных
+# w – открытие для записи данных w+, r+
+
+
+
+
+with open('file.txt', 'w') as data:
+ data.write('line 1\n')
+ data.write('line 2\n')
+
+colors = ['red', 'green', 'blue']
+data = open('file.txt', 'a')
+data.writelines(colors) # разделителей не будет
+data.close()
+path = 'file.txt'
+data = open(path, 'r')
+for line in data: 
+ print(line)
+data.close()
+
+

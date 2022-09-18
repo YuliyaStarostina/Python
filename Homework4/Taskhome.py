@@ -10,16 +10,27 @@
 # print(f"Значение числа с заданной точностью равно: {n:.{d}f}")
 
 # Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
-n = int(input(f'Введите число:\n'))
-def primfacs(n):
-   i = 2 # первый простой множитель
-   primfac = []
-   while i * i <= n:
-       while n % i == 0:
-           primfac.append(i)
-           n = n / i
-       i = i + 1
-   if n > 1:
-       primfac.append(n)
-   return primfac
-print(primfacs(n))
+# n = int(input(f'Введите число:\n'))
+# def primfacs(n):
+#    i = 2 # первый простой множитель
+#    primfac = []
+#    while i * i <= n:
+#        while n % i == 0:
+#            primfac.append(i)
+#            n = n / i
+#        i = i + 1
+#    if n > 1:
+#        primfac.append(n)
+#    return primfac
+# print(primfacs(n))
+
+
+# Задайте последовательность чисел. Напишите программу,
+# которая выведет список неповторяющихся элементов исходной последовательности
+
+
+lst = list(map(int, input("Введите числа через пробел:\n").split()))
+print(f"Исходный список: {lst}")
+new_lst = []
+[new_lst.append(i) for i in lst if i not in new_lst]
+print(f"Список из неповторяющихся элементов: {new_lst}")

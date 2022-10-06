@@ -16,7 +16,7 @@ def run():
             import_data.input_format1(record.record())
 
         if format == 2:
-            print('Формат: ";" - разделитель.')
+            print('Формат: " " - разделитель.')
 
             import_data.input_format2(record.record())
 
